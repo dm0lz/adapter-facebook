@@ -26,13 +26,13 @@ Feature: Translate facebook to schema.org/Person/User + getfetcher.net/Item
     ],
   "properties": {  
     "additionalType": [
-    "http://getfetcher.net/Item"
+      "http://getfetcher.net/Item"
     ],
-  "http://getfetcher.net/Item#id": [
-    735576666
+    "http://getfetcher.net/Item#id": [
+      735576666
     ],
-  "name": [
-    "Tomás Mehdi"
+    "name": [
+      "Tomás Mehdi"
     ]
   }
 

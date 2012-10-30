@@ -52,8 +52,8 @@ describe Adapter::Facebook::To::Schema::PersonUser do
       it "should initialize the :id with 'id'" do
         @person_user.id.should == @user['id']
       end
-      it "should initialize the :additionalType with 'additionalType'" do
-        @person_user.additionalType.should == @user['additionalType']
+      it "should initialize the :additionalType with 'http://getfetcher.net/Item'" do
+        @person_user.additionalType.should == "http://getfetcher.net/Item"
       end
     end
   end

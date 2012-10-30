@@ -19,7 +19,7 @@ module Adapter
           end
 
           def coerce facebook_user
-            @id             = facebook_user["id"].to_i
+            @id             = facebook_user["id"]
             @name           = facebook_user["name"]
             @additionalType = "http://getfetcher.net/Item"
           end
