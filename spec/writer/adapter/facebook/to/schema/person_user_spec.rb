@@ -23,7 +23,6 @@ describe Writer::Adapter::Facebook::To::Schema::PersonUser do
       @user_stub.should_receive(:_type).and_return "some type"
       @user_stub.should_receive(:attributes).and_return stub :[] => nil
       writer = Writer::Adapter::Facebook::To::Schema::PersonUser.new @user_stub
-      #binding.pry
       writer.hash.should include final_hash
     end
   end

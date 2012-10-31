@@ -10,6 +10,7 @@ module Adapter
 					attribute :id
 					attribute :author
 					attribute :likes
+					attribute :likesCount
 					attribute :comments
 					attribute :commentsCount
 
@@ -21,10 +22,14 @@ module Adapter
 					def coerce post
 						@id = post["id"]
 						@comments = []
+						@likes = []
 						@author = Adapter::Facebook::To::Schema::PersonUser.new post["from"]
-						@likes = Adapter::Facebook::To::Schema::Likes.new post["likes"]
+						post["likes"]["data"].each do |like|
+							@likes.push Adapter::Facebook::To::Schema::Like.new like
+						end
+						@likesCount = post["likes"]["count"]
 						post["comments"]["data"].each do |comment|
-							@comments.push Adapter::Facebook::To::Schema::Comment.new
+							@comments.push Adapter::Facebook::To::Schema::Comment.new comment
 						end
 						@commentsCount = post["comments"]["count"]
 					end

@@ -10,8 +10,7 @@ When /^I convert it into schema\.org\/Person\/User$/ do
    @translated = Adapter::Facebook::To::Schema::PersonUser.new @user
 end
 
-Then /^I should have :$/ do |string|
+Then /^I should have user:$/ do |string|
   @schema = JSON.parse string
-  binding.pry
   @translated.to.hash.should == @schema
 end

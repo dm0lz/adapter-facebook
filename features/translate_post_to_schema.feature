@@ -66,7 +66,7 @@ Feature: Translate facebook to schema.org/Person/User + getfetcher.net/Item
   """
 
   When I convert it into schema.org/Article
-  Then I should have :
+  Then I should have post:
 
   """ 
 {
@@ -87,7 +87,7 @@ Feature: Translate facebook to schema.org/Person/User + getfetcher.net/Item
 			      "http://getfetcher.net/Item"
 			    ],
 			    "http://getfetcher.net/Item#id": [
-			      735576666
+			      "735576666"
 			    ],
 			    "name": [
 			      "Tomás Mehdi"
@@ -95,143 +95,132 @@ Feature: Translate facebook to schema.org/Person/User + getfetcher.net/Item
 			  }
 			}
 		],
-		"ratingCount": [
+		"aggregateRating": [
 			{
 				"type": [
-					"http://schema.org/AggregateRating"
+					"http://schema.org/AggregateRating/Likes"
 				],
 				"properties": {
-					"count": [
+					"ratingCount": [
 						3
 					],
-					"authors": [
-						{
-							"author": [
-								{
-									"type": [
-							    	"http://schema.org/Person/User"
-							    ],
-								  "properties": {  
-								    "additionalType": [
-								      "http://getfetcher.net/Item"
-								    ],
-								    "http://getfetcher.net/Item#id": [
-								      536017463
-								    ],
-								    "name": [
-								      "Nahuel García Ocampo"
-								    ]
-								  }
-								}
-							]
+          "author": [
+          	{
+							"type": [
+					    	"http://schema.org/Person/User"
+					    ],
+						  "properties": {  
+						    "additionalType": [
+						      "http://getfetcher.net/Item"
+						    ],
+						    "http://getfetcher.net/Item#id": [
+						      "536017463"
+						    ],
+						    "name": [
+						      "Nahuel García Ocampo"
+						    ]
+						  }						
 						},
 						{
-							"author": [
-								{
-									"type": [
-							    	"http://schema.org/Person/User"
-							    ],
-								  "properties": {  
-								    "additionalType": [
-								      "http://getfetcher.net/Item"
-								    ],
-								    "http://getfetcher.net/Item#id": [
-								      1002769970
-								    ],
-								    "name": [
-								      "Luis Suas"
-								    ]
-								  }
-								}
-							]
+							"type": [
+					    	"http://schema.org/Person/User"
+					    ],
+						  "properties": {  
+						    "additionalType": [
+						      "http://getfetcher.net/Item"
+						    ],
+						    "http://getfetcher.net/Item#id": [
+						      "1002769970"
+						    ],
+						    "name": [
+						      "Luis Suas"
+						    ]
+						  }
 						},
 						{
-							"author": [
-								{
-									"type": [
-							    	"http://schema.org/Person/User"
-							    ],
-								  "properties": {  
-								    "additionalType": [
-								      "http://getfetcher.net/Item"
-								    ],
-								    "http://getfetcher.net/Item#id": [
-								      1060147124
-								    ],
-								    "name": [
-								      "Sol Laborde"
-								    ]
-								  }
-								}
-							]
+							"type": [
+					    	"http://schema.org/Person/User"
+					    ],
+						  "properties": {  
+						    "additionalType": [
+						      "http://getfetcher.net/Item"
+						    ],
+						    "http://getfetcher.net/Item#id": [
+						      "1060147124"
+						    ],
+						    "name": [
+						      "Sol Laborde"
+						    ]
+						  }
 						}
 					]
 				}
 			}
 		],
-		"userComments":[
-			{
-				"type": [
-					"http://schema.org/UserComments"
-				],
-				"properties": {
-					[
-						{
-							"id": [
-								"735576666_10151298637466667_26116437"
-							],
-							"author": [
-								{
-									"type": [
-							    	"http://schema.org/Person/User"
-							    ],
-								  "properties": {  
-								    "additionalType": [
-								      "http://getfetcher.net/Item"
-								    ],
-								    "http://getfetcher.net/Item#id": [
-								      1265409676
-								    ],
-								    "name": [
-								      "Facu Vivas"
-								    ]
-								  }
-								}
-							],
-							"text": [
-								"ser o no ser? jaja"
-							]
-						},
-						{
-							"id": [
-								"735576666_10151298637466667_26116661"
-							],
-							"author": [
-								{
-									"type": [
-							    	"http://schema.org/Person/User"
-							    ],
-								  "properties": {  
-								    "additionalType": [
-								      "http://getfetcher.net/Item"
-								    ],
-								    "http://getfetcher.net/Item#id": [
-								      600129837
-								    ],
-								    "name": [
-								      "Conrado Mader Blanco"
-								    ]
-								  }
-								}
-							],
-							"text": [
-								"che vos sabes mucha Inglé no?"
-							]
-						}
-					]
-				}	
-			}
-		] 
+		"comment": [
+      {
+        "type": [
+          "http://schema.org/UserComments"
+        ],
+        "properties": {
+          "id": [
+            "735576666_10151298637466667_26116437"
+          ],
+          "author": [
+            {
+              "type": [
+                "http://schema.org/Person/User"
+              ],
+              "properties": {  
+                "additionalType": [
+                  "http://getfetcher.net/Item"
+                ],
+                "http://getfetcher.net/Item#id": [
+                  "1265409676"
+                ],
+                "name": [
+                  "Facu Vivas"
+                ]
+              }
+            }
+          ],
+          "text": [
+            "ser o no ser? jaja"
+          ]
+        }
+      },
+            {
+        "type": [
+          "http://schema.org/UserComments"
+        ],
+        "properties": {
+          "id": [
+            "735576666_10151298637466667_26116661"
+          ],
+          "author": [
+            {
+              "type": [
+                "http://schema.org/Person/User"
+              ],
+              "properties": {  
+                "additionalType": [
+                  "http://getfetcher.net/Item"
+                ],
+                "http://getfetcher.net/Item#id": [
+                  "600129837"
+                ],
+                "name": [
+                  "Conrado Mader Blanco"
+                ]
+              }
+            }
+          ],
+          "text": [
+            "che vos sabes mucha Inglé no?"
+          ]
+        }
+      }
+    ]
 	}
 }
   """

@@ -45,19 +45,29 @@ describe Adapter::Facebook::To::Schema::Post do
       end
 
       it "should initialize the :id with 'id'" do
-        @translated_post.id.should == @post["id"]
+        @translated_post.id.to_s.should == @post["id"]
       end
 
       it "should initialize the :likes with 'likes'" do
-        @translated_post.likes.should == Adapter::Facebook::To::Schema::Likes.new(@post['likes'])
+        @post["likes"]["data"].each do |like|
+          Adapter::Facebook::To::Schema::Like.should_receive(:new).with(like)
+        end
+        Adapter::Facebook::To::Schema::Post.new @post
       end
 
       it "should initialize the :comments with 'comments'" do
-        @translated_post.comments.should == Adapter::Facebook::To::Schema::Comments.new(@post['comments'])
+        comments = []
+        @post['comments']["data"].each do |comment|
+          comments.push(Adapter::Facebook::To::Schema::Comment.new(comment))
+        end
+
+        [@translated_post.comments,comments].each do |comment1,comment2|
+          comment1.equals(comment2) == true
+        end
       end
 
       it "should initialize the :author with 'author'" do
-        @translated_post.author.should == Adapter::Facebook::To::Schema::PersonUser.new(@post['author'])
+        @translated_post.author.equals(Adapter::Facebook::To::Schema::PersonUser.new(@post['from'])).should == true
       end
 
   	end

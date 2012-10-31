@@ -15,13 +15,16 @@ module Adapter
           def initialize facebook_user
             @_type = "http://schema.org/Person/User"
             coerce facebook_user
-            #binding.pry
           end
 
           def coerce facebook_user
             @id             = facebook_user["id"]
             @name           = facebook_user["name"]
             @additionalType = "http://getfetcher.net/Item"
+          end
+
+          def equals user
+            @name == user.name and @id == user.id and @additionalType == user.additionalType
           end
 
         end

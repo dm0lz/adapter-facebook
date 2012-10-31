@@ -4,10 +4,13 @@ module Writer
       module To
         module Schema
           class PersonUser
+
             attr_reader :source
+
             def initialize source
               @source = source
             end
+            
             def hash
                @attributes = @source.attributes
               {
