@@ -48,6 +48,14 @@ describe Adapter::Facebook::To::Schema::Post do
         @translated_post.id.to_s.should == @post["id"]
       end
 
+      it "should initialize the :text with 'message'" do
+        @translated_post.text.should == @post["message"]
+      end
+
+      it "should initialize the :created_time with 'created_time'" do
+        @translated_post.created_time.should == @post["created_time"]
+      end
+
       it "should initialize the :likes with 'likes'" do
         @post["likes"]["data"].each do |like|
           Adapter::Facebook::To::Schema::Like.should_receive(:new).with(like)

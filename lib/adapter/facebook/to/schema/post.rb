@@ -10,9 +10,12 @@ module Adapter
 					attribute :id
 					attribute :author
 					attribute :likes
-					attribute :likesCount
+					attribute :likes_type
+					attribute :likes_count
 					attribute :comments
 					attribute :commentsCount
+					attribute :text
+					attribute :created_time
 
 					def initialize post
 						@_type = "http://schema.org/Article"
@@ -20,15 +23,18 @@ module Adapter
 					end
 
 					def coerce post
+						@likes_type = "http://schema.org/AggregateRating/Likes"
 						@id = post["id"]
 						@comments = []
 						@likes = []
+						@text = post["text"]
+						@created_time = post["created_time"]
 						@author = Adapter::Facebook::To::Schema::PersonUser.new post["from"]
 						post["likes"]["data"].each do |like|
 							puts like
 							@likes.push Adapter::Facebook::To::Schema::Like.new like
 						end
-						@likesCount = post["likes"]["count"]
+						@likes_count = post["likes"]["count"]
 						post["comments"]["data"].each do |comment|
 							@comments.push Adapter::Facebook::To::Schema::Comment.new comment
 						end

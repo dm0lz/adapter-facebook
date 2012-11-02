@@ -74,9 +74,15 @@ Feature: Translate facebook to schema.org/Person/User + getfetcher.net/Item
 		"http://schema.org/Article"
 	],
 	"properties": {
+    "id": [
+      "735576666_10151298637466667"
+    ],
 		"text": [
 			"Be ready for not be ready"
 		],
+    "created_time": [
+      "2012-10-27T15:18:35+0000"
+    ]
 		"author": [
 			{
 				"type": [
@@ -186,6 +192,9 @@ Feature: Translate facebook to schema.org/Person/User + getfetcher.net/Item
           ],
           "text": [
             "ser o no ser? jaja"
+          ],
+          "created_time": [
+            "2012-10-27T15:27:29+0000"
           ]
         }
       },
@@ -217,6 +226,9 @@ Feature: Translate facebook to schema.org/Person/User + getfetcher.net/Item
           ],
           "text": [
             "che vos sabes mucha Inglé no?"
+          ],
+          "created_time": [
+            "2012-10-27T15:45:12+0000"
           ]
         }
       }

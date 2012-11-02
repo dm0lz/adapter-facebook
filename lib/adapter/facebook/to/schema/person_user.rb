@@ -3,7 +3,6 @@ module Adapter
     module To
       module Schema
         class PersonUser
-
           include Virtus
           include Discoverer::Writer
           attr_reader :_type
