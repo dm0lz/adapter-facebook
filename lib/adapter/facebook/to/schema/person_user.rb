@@ -23,10 +23,6 @@ module Adapter
             @additionalType = "http://getfetcher.net/Item"
           end
 
-          def equals user
-            @name == user.name and @id == user.id and @additionalType == user.additionalType
-          end
-
         end
       end
     end

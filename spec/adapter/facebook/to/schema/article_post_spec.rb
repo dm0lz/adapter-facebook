@@ -56,18 +56,16 @@ describe Adapter::Facebook::To::Schema::Post do
       end
 
       it "should initialize the :comments with 'comments'" do
-        comments = []
         @post['comments']["data"].each do |comment|
-          comments.push(Adapter::Facebook::To::Schema::Comment.new(comment))
+          Adapter::Facebook::To::Schema::Comment.should_receive(:new).with(comment)
         end
-
-        [@translated_post.comments,comments].each do |comment1,comment2|
-          comment1.equals(comment2) == true
-        end
+        Adapter::Facebook::To::Schema::Post.new @post
       end
 
       it "should initialize the :author with 'author'" do
-        @translated_post.author.equals(Adapter::Facebook::To::Schema::PersonUser.new(@post['from'])).should == true
+        Adapter::Facebook::To::Schema::PersonUser.should_receive(:new).exactly(1).with(@post["from"])
+        Adapter::Facebook::To::Schema::PersonUser.should_receive(:new).exactly(5)
+        Adapter::Facebook::To::Schema::Post.new @post
       end
 
   	end

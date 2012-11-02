@@ -1,0 +1,16 @@
+{
+  "type": [
+    "http://schema.org/Person/User"
+  ],
+  "properties": {  
+    "additionalType": [
+      "http://getfetcher.net/Item"
+    ],
+    "http://getfetcher.net/Item#id": [
+      "536017463"
+    ],
+    "name": [
+      "Nahuel García Ocampo"
+    ]
+  }           
+}

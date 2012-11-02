@@ -9,8 +9,8 @@ module Adapter
 					attribute :id
 					attribute :author
 					attribute :text
-					attribute :likesCount
-					attribute :createdTime
+					attribute :likes_count
+					attribute :created_time
 
 					def initialize comments
 						@_type = "http://schema.org/UserComments"
@@ -21,12 +21,8 @@ module Adapter
 						@id = comment["id"]
 						@author = Adapter::Facebook::To::Schema::PersonUser.new(comment["from"])
 						@text = comment["message"]
-						@likesCount = comment["likes"]
-						@createdTime = comment["created_time"]
-					end
-					
-					def equals comment
-						@id == comment.id and @author == comment.author and @text == comment.text and @likes == comment.likes
+						@likes_count = comment["likes"]
+						@created_time = comment["created_time"]
 					end
 				end
 			end

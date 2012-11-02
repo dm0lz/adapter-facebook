@@ -25,6 +25,7 @@ module Adapter
 						@likes = []
 						@author = Adapter::Facebook::To::Schema::PersonUser.new post["from"]
 						post["likes"]["data"].each do |like|
+							puts like
 							@likes.push Adapter::Facebook::To::Schema::Like.new like
 						end
 						@likesCount = post["likes"]["count"]

@@ -26,22 +26,39 @@ describe Adapter::Facebook::To::Schema::Comment do
   end
 
   describe "#coerce" do
-    context "a valid facebook like is passed" do
+    context "a valid facebook comment is passed" do
 
       before do
-        @like_ex = JSON.parse File.read "spec/like.json"
-        @like = Adapter::Facebook::To::Schema::Like.new @like_ex
+        @comment_ex = JSON.parse File.read "spec/comment.json"
+        @comment = Adapter::Facebook::To::Schema::Comment.new @comment_ex
       end
 
-      it "should initialize the _type as http://schema.org/AggregateRating/Like" do
-        @like._type.should == "http://schema.org/AggregateRating/Like"
+      it "should initialize the _type as http://schema.org/UserComments" do
+        @comment._type.should == "http://schema.org/UserComments"
       end
 
       it "should initialize the :author" do
-        @like.author.attributes.should == (Adapter::Facebook::To::Schema::PersonUser.new(@like_ex)).attributes
+        Adapter::Facebook::To::Schema::PersonUser.should_receive(:new).with(@comment_ex["from"])
+        Adapter::Facebook::To::Schema::Comment.new @comment_ex
       end
+
+      it "should initialize the id" do
+        @comment.id.should == @comment_ex["id"]
+      end
+
+      it "should initialize the message" do
+        @comment.text.should == @comment_ex["message"]
+      end
+
+      it "should initialize the created time" do
+        @comment.created_time.should == @comment_ex["created_time"]
+      end
+
+      it "should initialize the like count if there are likes" do
+        @comment.likes_count.should == @comment_ex["likes"]
+      end
+
 
     end
   end
-
 end

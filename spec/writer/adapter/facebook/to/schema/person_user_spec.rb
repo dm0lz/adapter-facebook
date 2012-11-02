@@ -10,9 +10,11 @@ describe Writer::Adapter::Facebook::To::Schema::PersonUser do
   end
 
   describe "#hash" do
+
     before do 
       @user_stub = stub 'user'
     end
+    
     it 'should return the type' do 
       final_hash = {
         "type" => [
