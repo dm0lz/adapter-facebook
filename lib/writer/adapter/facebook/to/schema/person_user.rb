@@ -12,7 +12,7 @@ module Writer
             end
             
             def hash
-               @attributes = @source.attributes
+              @attributes = @source.attributes
               {
                 "type" => [
                   @source._type
