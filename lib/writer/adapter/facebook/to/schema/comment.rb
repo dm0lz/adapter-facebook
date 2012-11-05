@@ -21,22 +21,7 @@ module Writer
                     @source.id
                   ],
                   "author" => [
-                    {
-                      "type" => [
-                        @source[:author][:_type]
-                      ],
-                      "properties" => {  
-                        "additionalType" => [
-                          @source[:author][:additionalType]
-                        ],
-                        "http://getfetcher.net/Item#id" => [
-                          @source[:author][:id]
-                        ],
-                        "name" => [
-                          @source[:author][:name]
-                        ]
-                      }
-                    }
+                    
                   ],
                   "text" => [
                     @source.text
@@ -46,6 +31,8 @@ module Writer
                   ]
                 }
               }
+
+              @attributes[author].push(@source[author].hash)
             end
 
 
