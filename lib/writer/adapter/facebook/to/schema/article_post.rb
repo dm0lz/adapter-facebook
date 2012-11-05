@@ -12,31 +12,32 @@ module Writer
 
             def hash
               @attributes = @source.attributes
+              resp = 
               {
                 "type" => [
-                  @source._type
+                  @source[:_type]
                 ],
                 "properties" => {
                   "id" => [
-                    @source.id
+                    @attributes[:id]
                   ],
                   "text" => [
-                    @source.text
+                    @attributes[:text]
                   ],
                   "created_time" => [
-                    @source.created_time
+                    @attributes[:created_time]
                   ],
                   "author" => [
-                    @source[author].hash
+                    @attributes[:author].to.hash
                   ],
                   "aggregateRating" => [
                     {
                       "type" => [
-                        @source[likes_type]
+                        @attributes[:likes_type]
                       ],
                       "properties" => {
                         "ratingCount" => [
-                          @source[likes_count]
+                          @attributes[:likes_count]
                         ],
                         "author"=> [
                         ]
@@ -48,15 +49,18 @@ module Writer
                 }
               }
 
-              @source[likes].each do |like|
-                @attributes[properties][author].push(like.hash)
+              @attributes[:likes].each do |like|
+                resp["properties"]["aggregateRating"][0]["properties"]["author"].push(like.to.hash)
               end
 
-              @source[comments].each do |comment|
-                @attributes[properties][comment].push(comment.hash)
-              end 
+              @attributes[:comments].each do |comment|
+                resp["properties"]["comment"].push(comment.to.hash)
+              end
+              resp
+
             end
 
+            
 
           end
         end

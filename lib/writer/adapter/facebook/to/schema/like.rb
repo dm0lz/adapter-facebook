@@ -15,7 +15,7 @@ module Writer
               @attributes = @source.attributes
               {
                 "type" => [
-                  @source._type
+                  @source[:_type]
                 ],
                 "properties" => {
                   "additionalType" => [

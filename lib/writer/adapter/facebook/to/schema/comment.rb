@@ -12,27 +12,29 @@ module Writer
             
             def hash
               @attributes = @source.attributes
+              resp = 
               {
                 "type" => [
-                  @source._type
+                  @source[:_type]
                 ],
                 "properties"=> {
                   "id"=> [
-                    @source.id
+                    @attributes[:id]
                   ],
                   "author" => [
                     
                   ],
                   "text" => [
-                    @source.text
+                    @attributes[:text]
                   ],
                   "created_time" => [
-                    @source.created_time
+                    @attributes[:created_time]
                   ]
                 }
               }
+              resp["properties"]["author"].push(@attributes[:author].to.hash)
 
-              @attributes[author].push(@source[author].hash)
+              resp
             end
 
 

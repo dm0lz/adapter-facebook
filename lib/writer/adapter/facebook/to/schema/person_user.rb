@@ -13,9 +13,9 @@ module Writer
             
             def hash
               @attributes = @source.attributes
-              {
+              resp = {
                 "type" => [
-                  @source._type
+                  @source[:_type]
                 ],
                 "properties" => {
                   "additionalType" => [
@@ -29,6 +29,7 @@ module Writer
                   ]
                 }
               }
+              resp
             end
           end
         end

@@ -1,0 +1,157 @@
+=> {[1;32m:id[0m=>[32m[1;32m"[0m[32m735576666_10151298637466667[1;32m"[0m[32m[0m,[0m
+ [1;32m:author[0m=>
+  [32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::PersonUser:0x9f992ec
+   @_type="http://schema.org/Person/User",
+   @_writer=
+    #<Writer::Adapter::Facebook::To::Schema::PersonUser:0x9fe08cc
+     @attributes=
+      {:name=>"Tomás Mehdi",
+       :id=[1;32m>[0m[32m[0m[32m[1;32m"[0m[32m735576666[1;32m"[0m[32m[0m,
+       [1;32m:additionalType[0m=>[32m[1;32m"[0m[32mhttp://getfetcher.net/Item[1;32m"[0m[32m[0m},
+     @source=[32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::PersonUser:0x9f992ec ...[1;32m>[0m[32m[0m>,
+   @additionalType=[32m[1;32m"[0m[32mhttp://getfetcher.net/Item[1;32m"[0m[32m[0m,
+   @id=[32m[1;32m"[0m[32m735576666[1;32m"[0m[32m[0m,
+   @name=[32m[1;32m"[0m[32mTomás Mehdi[1;32m"[0m[32m[0m>,
+ [1;32m:likes[0m=>
+  [[32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::Like:0x9f98fa4
+    @_type="http://schema.org/AggregateRating/Like",
+    @_writer=
+     #<Writer::Adapter::Facebook::To::Schema::Like:0xa031b64
+      @attributes=
+       {:author=>
+         #<Adapter::Facebook::To::Schema::PersonUser:0x9f98f68
+          @_type="http://schema.org/Person/User",
+          @additionalType="http://getfetcher.net/Item",
+          @id="536017463",
+          @name="Nahuel García Ocampo">},
+      @source=#<Adapter::Facebook::To::Schema::Like:0x9f98fa4 ...>[1;32m>[0m[32m[0m,
+    @author=
+     [32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::PersonUser:0x9f98f68
+      @_type="http://schema.org/Person/User",
+      @additionalType="http://getfetcher.net/Item",
+      @id="536017463",
+      @name="Nahuel García Ocampo"[1;32m>[0m[32m[0m>,
+   [32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::Like:0x9f98b58
+    @_type="http://schema.org/AggregateRating/Like",
+    @_writer=
+     #<Writer::Adapter::Facebook::To::Schema::Like:0xa04978c
+      @attributes=
+       {:author=>
+         #<Adapter::Facebook::To::Schema::PersonUser:0x9f98acc
+          @_type="http://schema.org/Person/User",
+          @additionalType="http://getfetcher.net/Item",
+          @id="1002769970",
+          @name="Luis Suas">},
+      @source=#<Adapter::Facebook::To::Schema::Like:0x9f98b58 ...>[1;32m>[0m[32m[0m,
+    @author=
+     [32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::PersonUser:0x9f98acc
+      @_type="http://schema.org/Person/User",
+      @additionalType="http://getfetcher.net/Item",
+      @id="1002769970",
+      @name="Luis Suas"[1;32m>[0m[32m[0m>,
+   [32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::Like:0x9f98450
+    @_type="http://schema.org/AggregateRating/Like",
+    @_writer=
+     #<Writer::Adapter::Facebook::To::Schema::Like:0xa0485e4
+      @attributes=
+       {:author=>
+         #<Adapter::Facebook::To::Schema::PersonUser:0x9f98360
+          @_type="http://schema.org/Person/User",
+          @additionalType="http://getfetcher.net/Item",
+          @id="1060147124",
+          @name="Sol Laborde">},
+      @source=#<Adapter::Facebook::To::Schema::Like:0x9f98450 ...>[1;32m>[0m[32m[0m,
+    @author=
+     [32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::PersonUser:0x9f98360
+      @_type="http://schema.org/Person/User",
+      @additionalType="http://getfetcher.net/Item",
+      @id="1060147124",
+      @name="Sol Laborde"[1;32m>[0m[32m[0m>],
+ [1;32m:likes_type[0m=>[32m[1;32m"[0m[32mhttp://schema.org/AggregateRating/Likes[1;32m"[0m[32m[0m,
+ [1;32m:likes_count[0m=>[1;34m3[0m,
+ [1;32m:comments[0m=>
+  [[32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::Comment:0x9f97f00
+    @_type="http://schema.org/UserComments",
+    @_writer=
+     #<Writer::Adapter::Facebook::To::Schema::Comment:0xa04770c
+      @attributes=
+       {:id=>"735576666_10151298637466667_26116437",
+        :author=[1;32m>[0m[32m[0m
+         [32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::PersonUser:0x9f97e24
+          @_type="http://schema.org/Person/User",
+          @_writer=
+           #<Writer::Adapter::Facebook::To::Schema::PersonUser:0xa057904
+            @attributes=
+             {:name=>"Facu Vivas",
+              :id=[1;32m>[0m[32m[0m[32m[1;32m"[0m[32m1265409676[1;32m"[0m[32m[0m,
+              [1;32m:additionalType[0m=>[32m[1;32m"[0m[32mhttp://getfetcher.net/Item[1;32m"[0m[32m[0m},
+            @source=
+             [32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::PersonUser:0x9f97e24 ...[1;32m>[0m[32m[0m>,
+          @additionalType=[32m[1;32m"[0m[32mhttp://getfetcher.net/Item[1;32m"[0m[32m[0m,
+          @id=[32m[1;32m"[0m[32m1265409676[1;32m"[0m[32m[0m,
+          @name=[32m[1;32m"[0m[32mFacu Vivas[1;32m"[0m[32m[0m>,
+        [1;32m:text[0m=>[32m[1;32m"[0m[32mser o no ser? jaja[1;32m"[0m[32m[0m,
+        [1;32m:likes_count[0m=>[1;36mnil[0m,
+        [1;32m:created_time[0m=>[32m[1;32m"[0m[32m2012-10-27T15:27:29+0000[1;32m"[0m[32m[0m},
+      @source=[32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::Comment:0x9f97f00 ...[1;32m>[0m[32m[0m>,
+    @author=
+     [32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::PersonUser:0x9f97e24
+      @_type="http://schema.org/Person/User",
+      @_writer=
+       #<Writer::Adapter::Facebook::To::Schema::PersonUser:0xa057904
+        @attributes=
+         {:name=>"Facu Vivas",
+          :id=[1;32m>[0m[32m[0m[32m[1;32m"[0m[32m1265409676[1;32m"[0m[32m[0m,
+          [1;32m:additionalType[0m=>[32m[1;32m"[0m[32mhttp://getfetcher.net/Item[1;32m"[0m[32m[0m},
+        @source=[32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::PersonUser:0x9f97e24 ...[1;32m>[0m[32m[0m>,
+      @additionalType=[32m[1;32m"[0m[32mhttp://getfetcher.net/Item[1;32m"[0m[32m[0m,
+      @id=[32m[1;32m"[0m[32m1265409676[1;32m"[0m[32m[0m,
+      @name=[32m[1;32m"[0m[32mFacu Vivas[1;32m"[0m[32m[0m>,
+    @created_time=[32m[1;32m"[0m[32m2012-10-27T15:27:29+0000[1;32m"[0m[32m[0m,
+    @id=[32m[1;32m"[0m[32m735576666_10151298637466667_26116437[1;32m"[0m[32m[0m,
+    @likes_count=[1;36mnil[0m,
+    @text=[32m[1;32m"[0m[32mser o no ser? jaja[1;32m"[0m[32m[0m>,
+   [32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::Comment:0x9f97a14
+    @_type="http://schema.org/UserComments",
+    @_writer=
+     #<Writer::Adapter::Facebook::To::Schema::Comment:0xa0605a4
+      @attributes=
+       {:id=>"735576666_10151298637466667_26116661",
+        :author=[1;32m>[0m[32m[0m
+         [32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::PersonUser:0x9fb2d00
+          @_type="http://schema.org/Person/User",
+          @_writer=
+           #<Writer::Adapter::Facebook::To::Schema::PersonUser:0xa065298
+            @attributes=
+             {:name=>"Conrado Mader Blanco",
+              :id=[1;32m>[0m[32m[0m[32m[1;32m"[0m[32m600129837[1;32m"[0m[32m[0m,
+              [1;32m:additionalType[0m=>[32m[1;32m"[0m[32mhttp://getfetcher.net/Item[1;32m"[0m[32m[0m},
+            @source=
+             [32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::PersonUser:0x9fb2d00 ...[1;32m>[0m[32m[0m>,
+          @additionalType=[32m[1;32m"[0m[32mhttp://getfetcher.net/Item[1;32m"[0m[32m[0m,
+          @id=[32m[1;32m"[0m[32m600129837[1;32m"[0m[32m[0m,
+          @name=[32m[1;32m"[0m[32mConrado Mader Blanco[1;32m"[0m[32m[0m>,
+        [1;32m:text[0m=>[32m[1;32m"[0m[32mche vos sabes mucha Inglé no?[1;32m"[0m[32m[0m,
+        [1;32m:likes_count[0m=>[1;34m2[0m,
+        [1;32m:created_time[0m=>[32m[1;32m"[0m[32m2012-10-27T15:45:12+0000[1;32m"[0m[32m[0m},
+      @source=[32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::Comment:0x9f97a14 ...[1;32m>[0m[32m[0m>,
+    @author=
+     [32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::PersonUser:0x9fb2d00
+      @_type="http://schema.org/Person/User",
+      @_writer=
+       #<Writer::Adapter::Facebook::To::Schema::PersonUser:0xa065298
+        @attributes=
+         {:name=>"Conrado Mader Blanco",
+          :id=[1;32m>[0m[32m[0m[32m[1;32m"[0m[32m600129837[1;32m"[0m[32m[0m,
+          [1;32m:additionalType[0m=>[32m[1;32m"[0m[32mhttp://getfetcher.net/Item[1;32m"[0m[32m[0m},
+        @source=[32m[1;32m#<[0m[32mAdapter::Facebook::To::Schema::PersonUser:0x9fb2d00 ...[1;32m>[0m[32m[0m>,
+      @additionalType=[32m[1;32m"[0m[32mhttp://getfetcher.net/Item[1;32m"[0m[32m[0m,
+      @id=[32m[1;32m"[0m[32m600129837[1;32m"[0m[32m[0m,
+      @name=[32m[1;32m"[0m[32mConrado Mader Blanco[1;32m"[0m[32m[0m>,
+    @created_time=[32m[1;32m"[0m[32m2012-10-27T15:45:12+0000[1;32m"[0m[32m[0m,
+    @id=[32m[1;32m"[0m[32m735576666_10151298637466667_26116661[1;32m"[0m[32m[0m,
+    @likes_count=[1;34m2[0m,
+    @text=[32m[1;32m"[0m[32mche vos sabes mucha Inglé no?[1;32m"[0m[32m[0m>],
+ [1;32m:commentsCount[0m=>[1;34m2[0m,
+ [1;32m:text[0m=>[32m[1;32m"[0m[32mBe ready for not be ready[1;32m"[0m[32m[0m,
+ [1;32m:created_time[0m=>[32m[1;32m"[0m[32m2012-10-27T15:18:35+0000[1;32m"[0m[32m[0m}

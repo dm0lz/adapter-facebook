@@ -4,7 +4,7 @@ require 'json'
 require 'pry'
 
 require 'adapter/facebook/to/schema/person_user'
-require 'adapter/facebook/to/schema/post'
+require 'adapter/facebook/to/schema/article_post'
 require 'adapter/facebook/to/schema/like'
 require 'adapter/facebook/to/schema/comment'
 

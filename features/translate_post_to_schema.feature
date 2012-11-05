@@ -10,58 +10,58 @@ Feature: Translate facebook to schema.org/Person/User + getfetcher.net/Item
 
   """
   {
-      "id": "735576666_10151298637466667", 
-      "from": {
-        "name": "Tomás Mehdi", 
-        "id": "735576666"
-      }, 
-      "message": "Be ready for not be ready", 
-      "type": "status", 
-      "status_type": "mobile_status_update", 
-      "created_time": "2012-10-27T15:18:35+0000", 
-      "updated_time": "2012-10-27T15:45:12+0000", 
-      "likes": {
-        "data": [
-          {
-            "name": "Nahuel García Ocampo", 
-            "id": "536017463"
+    "id": "735576666_10151298637466667", 
+    "from": {
+      "name": "Tomás Mehdi", 
+      "id": "735576666"
+    }, 
+    "message": "Be ready for not be ready", 
+    "type": "status", 
+    "status_type": "mobile_status_update", 
+    "created_time": "2012-10-27T15:18:35+0000", 
+    "updated_time": "2012-10-27T15:45:12+0000", 
+    "likes": {
+      "data": [
+        {
+          "name": "Nahuel García Ocampo", 
+          "id": "536017463"
+        }, 
+        {
+          "name": "Luis Suas", 
+          "id": "1002769970"
+        }, 
+        {
+          "name": "Sol Laborde", 
+          "id": "1060147124"
+        }
+      ], 
+      "count": 3
+    }, 
+    "comments": {
+      "data": [
+        {
+          "id": "735576666_10151298637466667_26116437", 
+          "from": {
+            "name": "Facu Vivas", 
+            "id": "1265409676"
           }, 
-          {
-            "name": "Luis Suas", 
-            "id": "1002769970"
+          "message": "ser o no ser? jaja", 
+          "created_time": "2012-10-27T15:27:29+0000"
+        }, 
+        {
+          "id": "735576666_10151298637466667_26116661", 
+          "from": {
+            "name": "Conrado Mader Blanco", 
+            "id": "600129837"
           }, 
-          {
-            "name": "Sol Laborde", 
-            "id": "1060147124"
-          }
-        ], 
-        "count": 3
-      }, 
-      "comments": {
-        "data": [
-          {
-            "id": "735576666_10151298637466667_26116437", 
-            "from": {
-              "name": "Facu Vivas", 
-              "id": "1265409676"
-            }, 
-            "message": "ser o no ser? jaja", 
-            "created_time": "2012-10-27T15:27:29+0000"
-          }, 
-          {
-            "id": "735576666_10151298637466667_26116661", 
-            "from": {
-              "name": "Conrado Mader Blanco", 
-              "id": "600129837"
-            }, 
-            "message": "che vos sabes mucha Inglé no?", 
-            "created_time": "2012-10-27T15:45:12+0000", 
-            "likes": 2
-          }
-        ], 
-        "count": 2
-      }
+          "message": "che vos sabes mucha Inglé no?", 
+          "created_time": "2012-10-27T15:45:12+0000", 
+          "likes": 2
+        }
+      ], 
+      "count": 2
     }
+  }
 
   """
 
@@ -82,7 +82,7 @@ Feature: Translate facebook to schema.org/Person/User + getfetcher.net/Item
 		],
     "created_time": [
       "2012-10-27T15:18:35+0000"
-    ]
+    ],
 		"author": [
 			{
 				"type": [
@@ -113,7 +113,7 @@ Feature: Translate facebook to schema.org/Person/User + getfetcher.net/Item
           "author": [
           	{
 							"type": [
-					    	"http://schema.org/Person/User"
+					    	"http://schema.org/AggregateRating/Like"
 					    ],
 						  "properties": {  
 						    "additionalType": [
@@ -129,7 +129,7 @@ Feature: Translate facebook to schema.org/Person/User + getfetcher.net/Item
 						},
 						{
 							"type": [
-					    	"http://schema.org/Person/User"
+					    	"http://schema.org/AggregateRating/Like"
 					    ],
 						  "properties": {  
 						    "additionalType": [
@@ -145,7 +145,7 @@ Feature: Translate facebook to schema.org/Person/User + getfetcher.net/Item
 						},
 						{
 							"type": [
-					    	"http://schema.org/Person/User"
+					    	"http://schema.org/AggregateRating/Like"
 					    ],
 						  "properties": {  
 						    "additionalType": [
