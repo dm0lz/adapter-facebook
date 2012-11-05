@@ -24,10 +24,10 @@ module Writer
                   ],
                   "created_time" => [
                     @source.created_time
-                  ]
+                  ],
                   "author" => [
                     {
-                      "type": [
+                      "type" => [
                         @source[:author][:_type]
                       ],
                       "properties" => {  
@@ -68,7 +68,7 @@ module Writer
                                 "536017463"
                               ],
                               "name": [
-                                "Nahuel García Ocampo"
+                                "Nahuel Garcia Ocampo"
                               ]
                             }           
                           },
